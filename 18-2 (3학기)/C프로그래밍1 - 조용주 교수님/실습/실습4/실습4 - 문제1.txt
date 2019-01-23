@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int num()
+{
+	int i;
+	int n;
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		printf("%d\n", i);
+	}
+}
+
+
+int main(void)
+{
+	printf("자연수 N을 입력하시오:");
+	num();
+	return 0;
+}

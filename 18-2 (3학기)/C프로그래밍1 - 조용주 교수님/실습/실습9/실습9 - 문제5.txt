@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h> /* rand() 함수를 위해 필요함 */
+#include <time.h>
+
+#define len 50
+void copyArray(int* dest, int* src, int c)
+{
+	int* newdest = (int*)dest;
+	int* newsou = (int*)src;
+	for (int i = 0; i < c; i++)
+		newdest[i] = newsou[i];
+}
+
+int main(void)
+{
+	int str[50];
+	int str1[50];
+	int i;
+	int c;
+
+	srand(time(NULL)); /* 난수 발생기 초기화 */
+	int n = rand();
+
+	for (i = 0; i < len; i++) {
+		n = rand() % 100 + 1;
+		str[i] = n;
+		printf("%d ", str[i]);
+	}
+	printf("\n");
+	c = len;
+	copyArray(str1, str, len);
+
+	for (i = 0; i < len; i++) {
+		printf("%d ", str1[i]);
+	}
+	printf("\n");
+	return 0;
+}

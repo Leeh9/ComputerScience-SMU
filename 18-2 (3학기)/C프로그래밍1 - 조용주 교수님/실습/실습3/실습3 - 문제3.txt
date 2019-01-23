@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h> /* rand() 함수를 위해 필요함 */
+#include <time.h> /* time() 함수를 위해 필요함 */
+
+int main(void)
+{
+	int i;
+	srand(time(NULL)); /* 난수 발생기 초기화 */
+	int n = rand();
+	int a;
+	int b = 0;
+	double sum = 0;
+	double ave;
+
+	printf("정수 한개를 입력하시오:");
+	scanf("%d", &a);
+
+	for (i = 0; i < a; i++)
+	{
+		n = rand() % 101; /* 0~100까지의 숫자를 발생시킴 */
+		printf("n = %d\n", n);
+		if (n < 50)
+		{
+			sum += n;
+			b += 1; //50보다 작은수의 개수
+		}
+	}
+	ave = sum / b;
+	printf("50보다 작은값들의 평균: %lf\n", ave);
+
+	return 0;
+}

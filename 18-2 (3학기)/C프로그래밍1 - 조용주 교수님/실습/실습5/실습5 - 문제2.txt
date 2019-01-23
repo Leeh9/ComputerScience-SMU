@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int isLeapYear(unsigned year);
+
+int main(void)
+{
+	int year;
+	int month;
+	int result;
+
+	while (1)
+	{
+		printf("연도를 입력하시오:");
+		scanf("%d", &year);
+		if (year >= 1)
+			break;
+	}
+	while (1)
+	{
+		printf("월을 입력하시오:");
+		scanf("%d", &month);
+		if (month >= 1 && month <= 12)
+			break;
+	}
+
+	result = isLeapYear(year);
+
+	switch (month)
+	{
+	case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+		printf("%d월의 일수는 31일입니다.", month);
+		break;
+	case 2:
+		if (result == 1) {
+			printf("%d월의 일수는 29일입니다.", month);
+			break;
+		}
+		printf("%d월의 일수는 28일입니다.", month);
+		break;
+	case 4: case 6: case 9: case 11:
+		printf("%d월의 일수는 30일입니다.", month);
+		break;
+	}
+
+	return 0;
+}
+
+int isLeapYear(unsigned year)
+{
+	if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
+	{
+		printf("%d는 윤년입니다.\n", year);
+		return 1;
+	}
+	else
+		printf("%d는 윤년이 아닙니다.\n", year);
+	return 0;
+}

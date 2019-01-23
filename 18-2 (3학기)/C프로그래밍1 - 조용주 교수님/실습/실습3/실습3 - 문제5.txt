@@ -1,0 +1,19 @@
+//a3이 100을 넘는 최초의 값까지 양의 정수 a의 3승의 값을 구하는 프로그램을 작성하라
+//단 여기서는 break문을 반드시 사용한다.
+
+#include <stdio.h>
+
+int main(void)
+{
+	int a;
+	int b;
+
+	for (a = 1;; a++)
+	{
+		b = a * a * a;
+		printf("%d\n", b);
+		if (b > 100)
+			break;
+	}
+	return 0;
+}

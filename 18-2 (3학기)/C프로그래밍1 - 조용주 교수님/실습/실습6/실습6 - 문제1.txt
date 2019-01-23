@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int fact(int a, int result);
+
+int main(void)
+{
+	int a = 1;
+	int result = 1;
+	int last;
+	last = fact(a, result);
+	printf("10! = %d", last);
+	return 0;
+}
+
+int fact(int a, int result)
+{
+	if (a <= 10)
+	{
+		result = result * a;
+	}
+	else
+		return result;
+	fact(a+1, result);
+}

@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+void WriteBackward(char* s, int size)
+{
+	int i;
+	for (i = size - 1; i >= 0; i--)
+	{
+		printf("%c", s[i]);
+	}
+	printf("\n");
+	return 0;
+}
+
+int main(void)
+{
+	char *s = malloc(sizeof(char));
+
+	printf("문자열을 입력하시오:");
+	gets((s));
+	printf("%s\n", s);
+
+	WriteBackward(s, strlen(s));
+	return 0;
+}

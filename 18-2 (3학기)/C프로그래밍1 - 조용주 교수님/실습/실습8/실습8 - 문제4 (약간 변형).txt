@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h> 
+
+#define g 10
+int countNum(int *c, int val, int num)
+{
+	int countnum = 0;
+	int i;
+	for (i = 0; i < 100; i++)
+	{
+		if (*(c + i) == num)
+			countnum++;
+	}
+	return countnum;
+}
+int main(void)
+{
+	srand(time(NULL));
+	int count[g];
+	int * c = count;
+	int n = rand();
+	int i;
+	int a;
+	int num;
+
+	for (i = 0; i < g; i++)
+	{
+		n = rand() % 6 + 5; /* 1~6까지의 숫자를 발생시킴 */
+		count[i] = n;
+		printf("%d\n", count[i]);
+	}
+	scanf("%d", &num);
+	a = countNum(c, g, num);
+
+	printf("%d", a);
+	return 0;
+}
+
+// randint 함수를 이해할 수 없었음 (파이썬에서쓴다함) 그래서 rand로 구현

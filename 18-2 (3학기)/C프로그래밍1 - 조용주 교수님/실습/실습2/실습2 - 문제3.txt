@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int result = 1;
+	int n;
+	int i;
+	printf("한개의 숫자를 입력하시오 :");
+	scanf("%d", &n);
+	for (i = 1; i <= n; i++)
+	{
+		result = result * i;
+	}
+	printf("n! = %d\n", result);
+
+	return 0;
+}

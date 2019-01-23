@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int isLeapYear(unsigned year);
+
+int main(void)
+{
+	int year;
+
+	for (;;)
+	{
+		printf("연도를 입력하시오:");
+		scanf("%d", &year);
+		if (year >= 1)
+			break;
+	}
+	isLeapYear(year);
+	return 0;
+}
+
+int isLeapYear(unsigned year)
+{
+	if (year % 4 == 0 && year % 100 != 0)
+		printf("%d는 윤년입니다.\n", year);
+	else if (year % 400 == 0)
+		printf("%d는 윤년입니다.\n", year);
+	else
+		printf("%d는 윤년이 아닙니다.\n", year);
+	return 0;
+}

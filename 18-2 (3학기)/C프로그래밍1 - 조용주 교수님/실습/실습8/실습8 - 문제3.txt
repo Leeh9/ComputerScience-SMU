@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+	char p[] = "C is a general-purpose, imperative computer programming language, supporting structured programming, lexical variable scope and recursion, while a static type system prevents many unintended operations.";
+	int i;
+	int len = strlen(p);
+
+	for (i = len; i >= 0; i--) {
+		printf("%c", p[i]);
+	}
+	printf("\n");
+
+	return 0;
+}

@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+void sw(int m, int n)
+{
+	int t;
+
+	if (n == 0)
+	{
+		printf("%d\n", m);
+		return 0;
+	}
+	if (m%n == 0)
+	{
+		printf("%d\n", n);
+		return 0;
+	}
+	else
+	{
+		m = m % n;
+		t = n;
+		n = m;
+		m = t;
+	    sw( m,  n);
+	}
+}
+
+int main(void)
+{
+	int m;
+	int n;
+
+	printf("두 개의 정수를 입력하시오:");
+	scanf("%d %d", &m, &n);
+
+	sw(m, n);
+
+	return 0;
+}

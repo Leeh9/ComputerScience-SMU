@@ -1,0 +1,4 @@
+﻿  work.c
+c:\users\leehg\desktop\대학\18-2 ( 3학기 )\프밍1\과제\과제 03\homework3\homework3\work.c(10): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdio.h(1274): note: 'scanf' 선언을 참조하십시오.
+  homework3.vcxproj -> C:\Users\leehg\Desktop\대학\18-2 ( 3학기 )\프밍1\과제\과제 03\homework3\Debug\homework3.exe

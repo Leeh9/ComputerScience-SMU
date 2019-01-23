@@ -1,0 +1,4 @@
+﻿  MP07.c
+c:\users\leehg\desktop\대학\18-2 ( 3학기 )\프밍1\과제\과제 07\mp07\mp07\mp07.c(33): warning C4047: 'return': 'char *'의 간접 참조 수준이 'int'과(와) 다릅니다.
+c:\users\leehg\desktop\대학\18-2 ( 3학기 )\프밍1\과제\과제 07\mp07\mp07\mp07.c(21): warning C4716: 'tabtospace': 값을 반환해야 합니다.
+  MP07.vcxproj -> C:\Users\leehg\Desktop\대학\18-2 ( 3학기 )\프밍1\과제\과제 07\MP07\x64\Debug\MP07.exe
